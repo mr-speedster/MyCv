@@ -39,7 +39,7 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <a href="{{route('education_index')}}" class="btn btn-outline-info">Back</a>
+                                    <a href="{{route('education_index')}}" class="btn btn-outline-danger">Back</a>
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <input type="submit" class="btn btn-outline-success" value="Update">

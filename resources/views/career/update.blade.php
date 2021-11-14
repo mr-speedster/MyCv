@@ -26,7 +26,7 @@
                         <div class="form-group">
                             <div class="row">
                                <div class="col-md-6">
-                                    <a href="{{route('ca_index')}}" class="btn  btn-primary">Back</a>
+                                    <a href="{{route('ca_index')}}" class="btn  btn-danger">Back</a>
                                </div>
                                 <div class="col-md-6 text-right">
                                    <input type="submit" class="btn btn-success" value="Update">
