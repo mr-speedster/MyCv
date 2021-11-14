@@ -21,15 +21,9 @@
                             <tr>
                                 <td><p class="lead">{{ $d->career_object}}</p></td>  
                             </tr>
-                           
                             <tr>
                                 <td>
-                                    <a href="{{url('ca_update/'.base64_encode($d->id))}}" class="btn btn-warning btn-block">Update</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="{{url('pdf_display')}}" class="btn btn-primary btn-block">Preview Your cv</a>
+                                    <a href="{{url('pdf_display')}}" class="btn btn-success">Preview MyCv</a>
                                 </td>
                             </tr>
                         </tbody>

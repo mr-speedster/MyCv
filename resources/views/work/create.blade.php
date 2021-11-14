@@ -7,7 +7,7 @@
             <div class="card">
                   
                 <div class="card-body">
-                    <h3 class="text-info">Tell Us About Your Work Details</h3>
+                    <h3 class="text-dark">Your Work Details</h3>
                     <hr>
                     <form action="{{route('work_store')}}" method="post">
                         @csrf
@@ -20,6 +20,8 @@
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+                            </div>
+                            <div class="row">    
                                 <div class="col-md-5">
                                     <label for="">Position : </label>
                                     <input type="text" class="form-control @error('position') is-invalid @enderror" name="position" placeholder="Enter Position " value="{{ old('position') }}">
@@ -27,6 +29,9 @@
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="col-md-2">
                                     <label for="">Work Year : </label>
                                     <input type="text" class="form-control @error('year') is-invalid @enderror" name="year" placeholder="Work Year" value="{{ old('year') }}">
@@ -39,7 +44,7 @@
                         <div class="form-group">
                             <div class="row">
                                <div class="col-md-6">
-                                   <a href="{{route('education_index')}}" class="btn btn-primary">Back</a>
+                                   <a href="{{route('education_index')}}" class="btn btn-danger">Back</a>
                                </div>
                                 <div class="col-md-6 text-right">
                                    <input type="submit" class="btn btn-success" value="Continue">

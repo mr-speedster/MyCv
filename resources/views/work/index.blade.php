@@ -47,7 +47,7 @@
                             </tr>
                              <tr>
                                 <td colspan="5">
-                                    <a href="{{route('education_index')}}" class="btn btn-block btn-primary">Back to Education Summery</a>
+                                    <a href="{{route('education_index')}}" class="btn btn-block btn-danger">Back</a>
                                 </td>
                             </tr>
                         </tbody>

@@ -20,6 +20,8 @@
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-5">
                                     <label for="">About : </label>
                                     <input type="text" class="form-control @error('about') is-invalid @enderror" name="about" placeholder="About Certificate " value="{{ old('about') }}">
@@ -27,8 +29,10 @@
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-2">
-                                    <label for="">Certification Year : </label>
+                                    <label for="">Certification Year</label>
                                     <input type="text" class="form-control @error('year') is-invalid @enderror" name="year" placeholder="Certification Year" value="{{ old('year') }}">
                                     @error('year')
                                     <span class="text-danger">{{ $message }}</span>
