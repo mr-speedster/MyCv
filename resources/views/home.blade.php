@@ -5,9 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header"><h5>Hello, {{ ucwords(Auth::user()->name)}}</h5></div>
                 <div class="card-body">
-                    <h3 class="text-info">Tell Us About Yourself</h3>
+                    <h3 class="text-dark">Personal Info</h3>
 
                     <form action="{{route('store')}}" method="post">
                         @csrf
@@ -93,7 +92,7 @@
                         <div class="form-group">
                             <div class="row ">
                                 <div class="col-md-6">
-                                    <a href="{{route('main_index')}}" class="btn btn-info">Back</a>
+                                    <a href="{{route('main_index')}}" class="btn btn-danger">Back</a>
                                   
                                 </div>
                                 <div class="col-md-6 text-right">
