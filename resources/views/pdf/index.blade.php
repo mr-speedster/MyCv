@@ -12,16 +12,16 @@
                 page-break-after: always;
             }
         </style>
-        <title>Make you cv as PDF</title>
+        <title>MyCv as PDF</title>
     </head>
     <body>
         <div class="container " >
-            <div class="main-content mt-4" style="border: 1px solid;padding:15px; margin:30px 0">
+            <div class="main-content mt-4" style="border: 3px solid;padding:15px; margin:30px 0">
                 <div class="row justify-content-center">
                     <div class="offset ">
                         <table>
-                            <tr>
-                                <h4 style="text-transform:uppercase;text-align:center">Curriculum Vitae</h4>
+                            <tr class="">
+                                <h4 class="text-primary m-3" style="font-family: sans-serif;font-weight: 700;text-transform:uppercase;text-align:center">Curriculum Vitae</h4>
                             </tr>
                         </table>
 

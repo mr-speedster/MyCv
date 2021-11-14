@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header"><h5>Hello, {{ ucwords(Auth::user()->name)}}</h5></div>
+                  
                 <div class="card-body">
-                    <h3 class="text-info">Tell Us About Your Certification Details</h3>
+                    <h3 class="text-dark">Your Certification Details</h3>
                     <hr>
                     <form action="{{route('certificate_store')}}" method="post">
                         @csrf

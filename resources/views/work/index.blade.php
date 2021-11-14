@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header"><h5>Hello, {{ ucwords(Auth::user()->name)}}</h5></div>
+                  
                 <div class="card-body">
                     <h3 class="text-info" style="display:inline-block">Your Work Summery</h3>
                     <div class="text-right" style="display:inline-block;float:right">
