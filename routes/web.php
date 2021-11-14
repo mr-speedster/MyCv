@@ -1,5 +1,6 @@
 <?php
 
+use FontLib\Table\Type\name;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -64,3 +65,9 @@ Route::post('/ca_update/{id}','CareerObjectController@update')->name('update');
 Route::get('pdf_display','PdfController@index')->name('pdf_index');
 Route::get('pdf_download','PdfController@download')->name('download');
 
+//admin
+
+Route::get('admin/login','AdminController@index')->name('adminlogin');
+Route::post('admin/login/data','AdminController@admin')->name('adminlogindata');
+Route::get('admin/userview','AdminController@userview');
+Route::get("admin/delete/{id}",'AdminController@delete');

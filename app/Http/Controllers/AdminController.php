@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
+use App\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -14,9 +15,36 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.login');
     }
 
+    public function admin(Request $request)
+    {
+        $admin_data = $request->input();
+        //dd($admin_data);
+        $request->session()->put('email', $admin_data['admin_email']);
+        $email_login = $request->post('admin_email');
+        $password = $request->post('admin_pass');
+        
+        $admin_login = new Admin();
+        $user_validate = $admin_login
+            ->where('email', '=', $email_login)
+            ->where('password', '=', $password)
+            ->count();
+        //dd($user_validate);
+        if ($user_validate == 1) {
+            return redirect('/admin/userview');
+        } else {
+            return redirect('/admin')->withErrors('Acount does not Exist');
+        }
+
+    }
+    public function userview()
+    {
+        $users = User::all();
+        //dd($users);
+        return view('admin.userview',['users' => $users]);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -67,19 +95,17 @@ class AdminController extends Controller
      * @param  \App\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Admin $admin)
-    {
-        //
-    }
-
     /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Admin $admin)
+    public function delete($id)
     {
-        //
+        $selecteUser = User::where('id', $id)->first();
+
+        $selecteUser->delete();
+        return redirect('/admin/userview');
     }
 }
