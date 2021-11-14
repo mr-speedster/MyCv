@@ -37,10 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 align-self-center">
-            <h5 class="text-info">This is a Demo cv.</h5>
-            <img src="{{asset('images/cv.jpg')}}" alt="" class="img-fluid">
-        </div>
+         
     </div>
 </div>
 @endsection
