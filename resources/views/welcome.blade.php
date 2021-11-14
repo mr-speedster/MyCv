@@ -36,7 +36,7 @@
     <body>
             <nav class="navbar navbar-light bg-light justify-content-between">
                <div class="container">
-                <a class="navbar-brand">Resume.io</a>
+                <a class="navbar-brand">cv.io</a>
                 @if (Route::has('login'))
                 <div class=" links">
                     @auth

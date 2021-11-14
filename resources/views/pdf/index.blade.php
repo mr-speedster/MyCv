@@ -12,7 +12,7 @@
                 page-break-after: always;
             }
         </style>
-        <title>Make you Resume as PDF</title>
+        <title>Make you cv as PDF</title>
     </head>
     <body>
         <div class="container " >

@@ -41,6 +41,6 @@ class PdfController extends Controller
         $data['cetificates'] = Certificate::where('user_id', $usrId)->get();
         PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
         $pdf = PDF::loadView('pdf.index',compact('data'));
-        return $pdf->download('myresume.pdf');
+        return $pdf->download('mycv.pdf');
     }
 }

@@ -30,7 +30,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="{{url('pdf_display')}}" class="btn btn-primary btn-block">Preview Your Resume</a>
+                                    <a href="{{url('pdf_display')}}" class="btn btn-primary btn-block">Preview Your cv</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="col-md-3 align-self-center">
-            <h5 class="text-info">This is a Demo Resume.</h5>
+            <h5 class="text-info">This is a Demo cv.</h5>
             <img src="{{asset('images/cv.jpg')}}" alt="" class="img-fluid">
         </div>
     </div>
