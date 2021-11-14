@@ -15,26 +15,26 @@
         <title>MyCv as PDF</title>
     </head>
     <body>
-        <div class="container " >
-            <div class="main-content mt-4" style="border: 3px solid;padding:15px; margin:30px 0">
+        <div class="container ">
+            <div  style="background: white" class="main-content mt-4">
                 <div class="row justify-content-center">
                     <div class="offset ">
                         <table>
                             <tr class="">
-                                <h4 class="text-primary m-3" style="font-family: sans-serif;font-weight: 700;text-transform:uppercase;text-align:center">Curriculum Vitae</h4>
+                                <h4 class="text-dark m-3" style="font-family: sans-serif;font-weight: 700;text-transform:uppercase;text-align:center">Curriculum Vitae</h4>
                             </tr>
                         </table>
 
                     </div>
                 </div>
-                <div class="row justify-content-center mt-3">
+                <div class="row justify-content-center mt-3 ">
                     <div class="col-11">
-                        <div class="row">
-                            <table>
+                        <div class="row" style="background:cyan">
+                            <table >
                                 <tr>
                                     <td>
                                         <div class="name">
-                                            <h5 style="font-weight:700" class="m-0 p-0">{{$data['basicInfo']->first_name }}{{" " .$data['basicInfo']->last_name }}</h5>
+                                            <h5 style="font-weight:700;font-family: sans-serif;color: rgb(9, 9, 46)" class="m-0 p-0">{{$data['basicInfo']->first_name }}{{" " .$data['basicInfo']->last_name }}</h5>
                                             <span class="m-0 p-0">{{$data['basicInfo']->profession }}</span>
                                         </div>
                                         <span class="d-block">{{$data['basicInfo']->post_code }},{{$data['basicInfo']->address }}</span>

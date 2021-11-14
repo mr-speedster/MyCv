@@ -17,6 +17,7 @@
             list-style: none;
             font-family: 'Nunito', sans-serif;
         }
+
         .main-content {
             min-height: 100vh;
             width: 100%;
@@ -309,7 +310,7 @@
 </head>
 
 <body>
-    <main class="main-content">
+    <main class="main-content" style="min-height: 100vh;width: 80%;margin: 2rem auto;display: grid;grid-template-columns: repeat(7, 1fr);">
         <section class="left-section">
             <div class="left-content">
                 <div class="profile">

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <title>MyCv as PDF</title>
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-3" style="background:#0d365e;">
+                    <div class="row my-4">
+                        <h2 class="name text-light">
+                            {{ $data['basicInfo']->first_name }}{{ ' ' . $data['basicInfo']->last_name }}</h2>
+                            <br><br>
+                        <p class="career text-light">{{ $data['basicInfo']->profession }}</p>
+                    </div>
+                    <div class="row">
+                        <div class="m-3">
+                            <h3 class="main-title text-light">Contact Info</h3>
+                            <ul>
+                                <li class="text-light">
+                                    <i class="fa fa-phone"></i>
+                                    {{ $data['basicInfo']->phone }}
+                                </li>
+                                <li class="text-light">
+                                    <i class="fa fa-fax"></i>
+                                    {{ $data['basicInfo']->email }}
+                                </li>
+                                <li class="text-light">
+                                    <i class="fa fa-globe"></i>
+                                    {{ $data['basicInfo']->website }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="background: whitesmoke;">
+                    <div class="row">
+                        <section class="">
+                            <h2 class="right-title mt-5">About Me</h2>
+                            <p>{{ $data['objective']->career_object }}</p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="mt-2">
+                            <h2 class="text-dark">Experience</h2>
+                            @foreach ($data['works'] as $work)
+                                <div class="timeline">
+                                    <div class="left-tl-content">
+                                        <h5 class="tl-title">{{ $work->company_name }}</h5>
+                                        <h5 class="tl-title">{{ $work->position }}</h5>
+                                        <p class="para">{{ $work->year }}</p>
+                                    </div>
+                                </div>
+                                <br><br>
+                            @endforeach
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="mt-2">
+                            <h2 class="right-title">Education</h2>
+                            @foreach ($data['educations'] as $edu)
+                                <div class="timeline">
+                                    <div class="left-tl-content">
+                                        <h5 class="tl-title">{{ $edu->degree }}</h5>
+                                        <h5 class="tl-title">{{ $edu->institute }}</h5>
+                                        <p class="para">{{ $edu->year }}</p>
+                                    </div>
+                                </div>
+                                <br><br>
+                            @endforeach
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="mt-2">
+                            <h2 class="">Certificate</h2>
+                            @foreach ($data['cetificates'] as $cer)
+                                <div class="timeline">
+                                    <div class="left-tl-content">
+                                        <h5 class="tl-title">{{ $cer->certificate_name }}</h5>
+                                        <h5 class="tl-title">{{ $cer->about }}</h5>
+                                        <p class="para">{{ $cer->year }}</p>
+                                    </div>
+                                </div>
+                                <br><br>
+                            @endforeach
+                        </section>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="{{ route('main_index') }}" class="btn btn-danger">Back</a>
+                        </div>
+                        <div class="col-6 text-right">
+                            <a href="{{ url('pdf_download') }}" class="btn btn-success"
+                                onclick="return confirm('Are you Sure ?')">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- container -->
+        <!-- ptional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
