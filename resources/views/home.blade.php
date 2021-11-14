@@ -37,6 +37,8 @@
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-6">
                                     <label for="">Email : </label>
                                     <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Enter Your Email" value ="{{old('email')}}">
@@ -55,6 +57,8 @@
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-6">
                                     <label for="">Website : </label>
                                     <input type="text" class="form-control @error('website') is-invalid @enderror" name="website" placeholder="Enter Your Website" value ="{{old('website')}}">
@@ -73,6 +77,8 @@
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+                            </div>
+                            <div class="row m-2">
                                 <div class="col-md-3">
                                     <label for="">Post Code : </label>
                                     <input type="text" class="form-control @error('post_code') is-invalid @enderror" name="post_code" placeholder="Enter Your Post Code" value ="{{old('post_code')}}">
