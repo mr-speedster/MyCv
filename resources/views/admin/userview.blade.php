@@ -20,7 +20,10 @@
       <nav>
         <div class="container">
           <div class="text-center">
-            <a href="/" class="nav-brand text-light">MyCv | ADMIN</a>
+            <a href="#" class="nav-brand text-light">MyCv | ADMIN</a>
+          </div>
+          <div class="text-center" style="float: right">
+            <a href="/" class="nav-brand text-dark">MyCv | UserLogin</a>
           </div>
         </div>
       </nav>
